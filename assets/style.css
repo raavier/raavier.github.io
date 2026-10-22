@@ -247,9 +247,10 @@ button { font: inherit; cursor: pointer; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(232,169,59,.7); } 100% { box-shadow: 0 0 0 10px rgba(232,169,59,0); } }
 
 .switch { display: flex; gap: 8px; padding: 0; background: none; margin-bottom: 14px; }
-.switch__btn { position: relative; overflow: hidden; flex: 1; padding: 12px 14px; font-size: 13px; font-weight: 600; color: var(--text-2); background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+.switch__btn { position: relative; overflow: hidden; flex: 1; padding: 12px 14px; font: 700 14px/1.2 var(--font); letter-spacing: 0; color: var(--text-2); background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
 .switch__btn[aria-pressed="true"] { color: #fff; background: var(--teal); border-color: var(--teal); box-shadow: none; }
 .switch__btn span { position: relative; z-index: 1; }
+.switch__pre { font-size: inherit; font-weight: 500; opacity: .8; }
 .switch__progress { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: var(--amber); transform-origin: left; transform: scaleX(var(--progress, 0)); transition: transform .25s linear; }
 .demo-chosen .switch__progress { display: none; }
 .switch__btn:not([aria-pressed="true"]):hover { border-color: rgba(15,94,91,.4); color: var(--teal); }
@@ -262,7 +263,8 @@ button { font: inherit; cursor: pointer; }
   .tabs__btn { padding: 12px 14px; }
   .tabs__num { font-size: 16px; }
   .tabs__btn[aria-selected="true"]::after { display: none; }
-  .switch__btn { padding: 10px 6px; font-size: 12px; white-space: nowrap; }
+  .switch__btn { padding: 12px 8px; font-size: 15px; white-space: nowrap; }
+  .switch__pre { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tabs__btn.is-unseen::before { animation: none; }
